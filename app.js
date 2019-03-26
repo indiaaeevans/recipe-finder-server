@@ -8,8 +8,6 @@ var indexRouter = require('./routes/index');
 var recipesRouter = require('./routes/recipes');
 var ingredientsRouter = require('./routes/ingredients');
 
-require('dotenv').config();
-
 var app = express();
 
 // view engine setup
