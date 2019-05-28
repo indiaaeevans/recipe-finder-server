@@ -8,14 +8,14 @@ module.exports = {
       'X-RapidAPI-Key': process.env.API_KEY
     }
   },
-  requestsRemaining: 10,
+  requestsRemaining: 50,
   handleRequest: function(req, res, actionFn) {
     if (this.requestsRemaining > 0) actionFn(req, res);
     else res.send('No free requests remaining');
   },
   updateRequestsRemaining: function(amount) {
     this.requestsRemaining = amount;
-    console.log('requestsRemaining updated to: ', this.requestsRemaining);
+    console.log('free requests remaining: ', this.requestsRemaining);
   },
   validQueryParams: [
     'query',

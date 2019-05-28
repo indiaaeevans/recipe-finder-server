@@ -15,8 +15,7 @@ function getAutoCompleteSuggestions(req, res) {
   const url = `${spoonacularAPI}/food/ingredients/autocomplete?query=${term}`;
   request
     .get(url, options, function(error, response, body) {
-      if (error) console.log('error', error);
-      console.log(body);
+      if (error) console.error(error);
       helper.updateRequestsRemaining(
         response.headers['x-ratelimit-requests-remaining']
       );
