@@ -5,7 +5,7 @@ module.exports = {
     'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
   options: {
     headers: {
-      'X-RapidAPI-Key': process.env.API_KEY
+      'X-RapidAPI-Key': process.env.SPOONACULAR_API_KEY
     }
   },
   requestsRemaining: 50,
