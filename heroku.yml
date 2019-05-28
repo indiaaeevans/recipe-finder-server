@@ -4,6 +4,4 @@ build:
   docker:
     web: Dockerfile
 run:
-  config:
-    NODE_ENV: production
   web: node ./bin/www

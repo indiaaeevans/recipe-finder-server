@@ -3,7 +3,10 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Server for Recipe Finder application' });
+  res.render('index', {
+    title: 'Recipe Finder Server',
+    environment: process.env.NODE_ENV
+  });
 });
 
 module.exports = router;
